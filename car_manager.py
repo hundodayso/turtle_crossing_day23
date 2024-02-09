@@ -11,7 +11,7 @@ class CarManager:
     def __init__(self):
         self.all_cars = []
 
-    def new_car(self):
+    def create_car(self):
         new_car = Turtle(shape="square")
         new_car.penup()
         new_car.color(random.choice(CAR_COLOURS))

@@ -17,7 +17,7 @@ screen.listen()
 screen.onkeypress(fun=player.move_up, key="w")
 
 game_is_on = True
-car_manager.new_car()
+car_manager.create_car()
 while game_is_on:
     count += 1
     time.sleep(0.1)
@@ -26,7 +26,7 @@ while game_is_on:
     # Add a new car every sixth loop
     if count == 6:
         count = 0
-        car_manager.new_car()
+        car_manager.create_car()
     for car in car_manager.all_cars:
         car.distance(player) < 20
         print("hello")
